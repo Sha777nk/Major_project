@@ -62,11 +62,11 @@ from fastapi.middleware.cors import CORSMiddleware
 from fastapi import HTTPException
 from pydantic import BaseModel
 import numpy as np
-import pandas as pd
+import pandas as pd # type: ignore
 from io import BytesIO
 from PIL import Image
 import tensorflow as tf
-import joblib
+import joblib # type: ignore
 import logging
 
 # Initialize FastAPI app
