@@ -172,10 +172,11 @@ const CropYieldPrediction = () => {
                 >
                     <h3 style={{ fontSize: "24px" }}>Predicted Yield</h3>
                     <p style={{ fontSize: "20px", fontWeight: "bold" }}>
-                        {yieldPrediction.predicted_yield} Tonne
-                    </p> 
+    {(Math.abs(parseFloat(yieldPrediction.predicted_yield)) * area).toFixed(2)*100} Kg
+</p>
+
                     <p style={{ fontSize: "18px" }}>
-                        The yield of <strong>{crop}</strong> in <strong>{district}</strong> for a land area of <strong>{area} acres</strong> is approximately <strong>{yieldPrediction.predicted_yield} Tonne</strong>.
+                        The yield of <strong>{crop}</strong> in <strong>{district}</strong> for a land area of <strong>{area} acres</strong> is approximately <strong> {(Math.abs(parseFloat(yieldPrediction.predicted_yield)) * area).toFixed(2)*100} Kg </strong>.
                     </p>
                 </div>
             )}
